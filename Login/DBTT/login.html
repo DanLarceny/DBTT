@@ -1,0 +1,97 @@
+<html>
+<body style="background-image:url(images/bg.jpg); background-repeat: no-repeat; background-size: cover;">
+    <style>
+        input[type=button],
+        input[type=submit]{
+            background-color: coral;
+            border: 10cm,black;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            width:auto;
+            height:auto;
+            font-size: medium;
+            border-radius: 12px;
+        }   
+    </style>
+
+
+
+
+    <center>
+        <img src="images/singhealth.png" alt="centered image" style="width: 300; border-radius: 40px;" />
+        <!-- <p>Welcome to your personalized healthcare, the future of healthcare awaits you!</p> -->
+    </center>
+    <br>
+    <center>
+        <form method="POST" action="patient.php">
+            <table style="background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 20px; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+                <tr>
+                    <td rowspan="4">
+                        <img src="images/loginpic.png"alt="centered image" style="width: 250;border-radius: 20px;"/>
+                    </td>
+                    <!-- <td>
+                        <b style="font-size: 30px;">Email:</b> 
+                    </td> -->
+                        <td align="right">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="new-post"
+                        />
+                        
+                        </td>
+                        
+                        <td colspan="2" align="center">
+                            <input type="email" name="email" 
+                            style="width: 450px; height: 40px; 
+                            font-size: large; border-color: #fff; border-radius: 5px;"
+                            placeholder="Email">
+                        </td>
+                </tr>
+
+                <tr>
+                    <td align="right">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/password.png" alt="password"/>
+                    </td>
+                    <td colspan="2" align="center">
+                        <input type="password" name="password" 
+                        style="width: 450px; height: 40px; 
+                        font-size: large; border-color: #fff; border-radius: 5px;"
+                        placeholder="Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="left">
+                        <input type="submit" name="patient" value="LOGIN AS PATIENT">
+                    </td>
+                    </form>
+                    <form action="staff.php" method="POST">
+                    <td align="right">
+                        <input type="submit" name="staff" value="LOGIN AS STAFF">
+                    </td>
+                </form>
+                </tr>
+                <!-- <tr>
+                    <td></td>
+                    <td align="left">
+                        <input type="submit" name="registerPatient" value="REGISTER AS PATIENT">
+                    </td>
+                    <td align="right">
+                        <input type="submit" name="registerStaff" value="REGISTER AS STAFF">
+                    </td>
+                </tr> -->
+                
+            </table>
+            
+            
+            
+            
+    </center>
+
+        </form>
+
+</body>
+
+</html>

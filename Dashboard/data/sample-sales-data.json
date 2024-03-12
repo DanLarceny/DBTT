@@ -1,0 +1,51 @@
+[{
+        "date": "2018-08-01",
+        "heartrate": 147,
+        "blood_pressure (mm HG)": "112/23",
+        "Patient": 9833,
+        "-": 17205
+    },
+    {
+        "date": "2018-09-01",
+        "heartrate": 146,
+        "blood_pressure (mm HG)": "112/23",
+        "Patient": 9833,
+        "-": 17205
+
+    },
+    {
+        "date": "2018-10-01",
+        "heartrate": 147,
+        "blood_pressure (mm HG)": "112/23",
+        "Patient": 9833,
+        "-": 17205
+    },
+    {
+        "date": "2018-11-01",
+        "heartrate": 147,
+        "blood_pressure (mm HG)": "113/23",
+        "Patient": 9833,
+        "-": 17205
+    },
+    {
+        "date": "2018-12-01",
+        "heartrate": 147,
+        "blood_pressure (mm HG)": "112/23",
+        "Patient": 9833,
+        "-": 17205
+    },
+    {
+        "date": "2018-13-01",
+        "heartrate": 147,
+        "blood_pressure (mm HG)": "112/23",
+        "Patient": 9833,
+        "-": 17205
+    },
+    {
+        "date": "2018-08-01",
+        "heartrate": 147,
+        "blood_pressure (mm HG)": "112/23",
+        "Patient": 9833,
+        "-": 17205
+    }
+]

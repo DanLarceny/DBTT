@@ -88,7 +88,7 @@
         <ul class="nav navbar-nav flex-column sticky-top">
             <li class="nav-item sidenav-brand">
                 <a class="nav-link sidenav-brand-link" href="#">
-                    <div class="sidenav-brand-link-text"><i class="fas fa-funnel-dollar"></i> Healthcare</div>
+                    <div class="sidenav-brand-link-text"><i class="fas fa-funnel-dollar"></i> Healthcare Assistant</div>
                 </a>
             </li>
             <li class="nav-item">
@@ -101,36 +101,19 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-sidenav fa-chart-area "></i>
-                    <div class="sidenav-link-text">Medication</div>
+                    <div class="sidenav-link-text">Diagnosis</div>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-sidenav fa-download"></i>
-                    <div class="sidenav-link-text">Export</div>
+                    <div class="sidenav-link-text">Reminders</div>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-sidenav fa-folder-open"></i>
                     <div class="sidenav-link-text">Reports</div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sidenav fa-link"></i>
-                    <div class="sidenav-link-text">Link</div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sidenav fa-link"></i>
-                    <div class="sidenav-link-text">Link</div>
-                </a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sidenav fa-link"></i>
-                    <div class="sidenav-link-text">Link</div>
                 </a>
             </li>
         </ul>
@@ -184,30 +167,19 @@
 
         </div>
 
-
-        <!-- card decks code from: https://www.codeply.com/go/nIB6oSbv6q -->
-
         <div class="card-deck m-0 p-0">
-            <div class="card my-1 card-area-chart">
-                <div class="card-body p-1">
-                    <!-- <div id="area-chart"></div> -->
-                    <figure id="area-chart" aria-label="Area Chart: Monthly Recurring Revenue (USD)" tabindex="0"></figure>
-
-                </div>
-            </div>
-            <div class="card my-1 card-bar-chart">
-                <div class="card-body p-1">
-                    <figure id="bar-chart" aria-label="Bar Chart: Quarterly Sales (USD) By Region" tabindex="0"></figure>
-                </div>
-            </div>
-
-            <div class="card my-1 card-pie-chart">
-                <div class="card-body p-1">
-                    <figure id="pie-chart" aria-label="Pie Chart: Monthly Sales by Category" tabindex="0"></figure>
+            <div class="card my-0">
+                <div class="content-container">
+                    <h3>Patient Dashboard</h3>
+                    <div class="center-container">
+                        <script type='module' src='https://prod-apnortheast-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'></script><tableau-viz id='tableau-viz' src='https://prod-apnortheast-a.online.tableau.com/t/brendantan202229e5a4a177/views/HealthDashboard/HealthDashboard/d8ad87d0-9126-4aab-907b-2cb539553416/fbee4dcb-c9d9-44d7-9a40-79b79da663ee' width='2000' height='2040' hide-tabs toolbar='bottom' ></tableau-viz>
+                    </div>
                 </div>
             </div>
         </div>
-        
+
+
+        <!-- card decks code from: https://www.codeply.com/go/nIB6oSbv6q -->  
 
         <div class="card p-1 m-1 card-datatable card-body">
             <div id="table-container" class="table-responsive px-2"></div>

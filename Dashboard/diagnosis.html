@@ -24,23 +24,7 @@
 
     <title>Modern JavaScript Dashboard</title>
 
-    <style>
-        /* Optional CSS for styling */
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .checked {
-            text-decoration: line-through;
-            color: gray;
-        }
-    </style>
-
 </head>
-
 
 
 
@@ -110,7 +94,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="doctor_dashboard.html">
                     <i class="fas fa-fw fa-sidenav fa-tachometer-alt"></i>
                     <div class="sidenav-link-text">Dashboard</div>
                 </a>
@@ -139,42 +123,25 @@
 
     <main class="main-container container-fluid pt-1 px-2 m-0">
 
-        <div class="card-deck m-0 p-0">
-            <div class="card my-1 card-pie-chart">
-                <div class="content-container">
-                    <h2>Daily Reminders</h2>
-                    <form id="checklistForm">
-                        <input type="text" id="taskInput" placeholder="Enter task">
-                        <button type="button" onclick="addTask()">Add</button>
-                    </form>
-                    <ul id="taskList">
-                        <!-- Proxy items added here for demonstration -->
-                        <li onclick="toggleTask(this)">1. Check on Patient 20</li>
-                        <li onclick="toggleTask(this)">2. Diagnosis for Patient 23</li>
-                        <li onclick="toggleTask(this)">3. Diagnosis for Patient 1</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        </div>
-
-        <div class="card-deck m-0 p-0">
-            <div class="card my-0">
-                <div class="content-container">
-                    <h3>Patient Dashboard</h3>
-                    <div class="center-container">
-                        <script type='module' src='https://prod-apnortheast-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'></script><tableau-viz id='tableau-viz' src='https://prod-apnortheast-a.online.tableau.com/t/brendantan202229e5a4a177/views/HealthDashboard/HealthDashboard/d8ad87d0-9126-4aab-907b-2cb539553416/fbee4dcb-c9d9-44d7-9a40-79b79da663ee' width='2000' height='2040' hide-tabs toolbar='bottom' ></tableau-viz>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <!-- card decks code from: https://www.codeply.com/go/nIB6oSbv6q -->  
 
         <div class="card p-1 m-1 card-datatable card-body">
-            <div id="table-container" class="table-responsive px-2"></div>
+            <form action="/submit" method="post">
+                <label for="fname">Age:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                
+                <label for="lname">Gender:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                
+                <label for="email">Height:</label><br>
+                <input type="email" id="email" name="email"><br>
+                
+                <label for="message">Weight:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                
+                <input type="submit" value="Submit">
+              </form>
         </div>
     </main>
 
@@ -208,32 +175,5 @@
     <script src="src/js/modern-table-demo.js"></script>
 
 </body>
-
-<script>
-    var taskId = 3; // Starting task ID (to account for proxy items)
-    
-    function addTask() {
-        var input = document.getElementById("taskInput").value;
-        if (input === '') {
-            alert("Please enter a task!");
-            return;
-        }
-        
-        taskId++; // Increment task ID
-        var taskList = document.getElementById("taskList");
-        var li = document.createElement("li");
-        li.textContent = taskId + ". " + input; // Prepend task ID
-        li.addEventListener("click", function() {
-            toggleTask(this);
-        });
-        taskList.appendChild(li);
-        
-        document.getElementById("taskInput").value = ""; // Clear the input field
-    }
-    
-    function toggleTask(task) {
-        task.classList.toggle("checked");
-    }
-    </script>
 
 </html>

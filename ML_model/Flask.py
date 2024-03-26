@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 from Model import HealthPredictor  # Assuming this is your custom model class
 import pandas as pd
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Instantiate the HealthPredictor
 predictor = HealthPredictor()

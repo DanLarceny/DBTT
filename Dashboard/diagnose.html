@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Predictor</title>
+</head>
+<body>
+    <h1>Health Predictor</h1>
+    <form id="healthForm">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" required><br><br>
+
+        <label for="height">Height:</label>
+        <input type="number" id="height" name="height" required><br><br>
+
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" name="weight" required><br><br>
+
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" step="0.01" required><br><br>
+
+        <label for="resting_hr">Resting Heart Rate:</label>
+        <input type="number" id="resting_hr" name="resting_hr" required><br><br>
+
+        <label for="blood_pressure_systolic">Blood Pressure Systolic:</label>
+        <input type="number" id="blood_pressure_systolic" name="blood_pressure_systolic" required><br><br>
+
+        <label for="blood_pressure_diastolic">Blood Pressure Diastolic:</label>
+        <input type="number" id="blood_pressure_diastolic" name="blood_pressure_diastolic" required><br><br>
+
+        <label for="respiratory_rate">Respiratory Rate:</label>
+        <input type="number" id="respiratory_rate" name="respiratory_rate" required><br><br>
+
+        <label for="body_temperature">Body Temperature:</label>
+        <input type="number" id="body_temperature" name="body_temperature" step="0.01" required><br><br>
+
+        <label for="blood_sugar_levels">Blood Sugar Levels:</label>
+        <input type="number" id="blood_sugar_levels" name="blood_sugar_levels" required><br><br>
+
+        <label for="oxygen_saturation_levels">Oxygen Saturation Levels:</label>
+        <input type="number" id="oxygen_saturation_levels" name="oxygen_saturation_levels" required><br><br>
+
+        <label for="medical_conditions">Medical Conditions:</label>
+        <input type="text" id="medical_conditions" name="medical_conditions" required><br><br>
+
+        <label for="medication_required">Medication Required:</label>
+        <input type="text" id="medication_required" name="medication_required" required><br><br>
+
+        <!-- Add more fields as needed -->
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("healthForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Collect form data
+            var formData = {
+                "Age": [parseFloat(document.getElementById("age").value)],
+                "Gender": [document.getElementById("gender").value],
+                "Height": [parseFloat(document.getElementById("height").value)],
+                "Weight": [parseFloat(document.getElementById("weight").value)],
+                "BMI": [parseFloat(document.getElementById("bmi").value)],
+                "Resting Heart Rate": [parseFloat(document.getElementById("resting_hr").value)],
+                "Blood Pressure Systolic": [parseFloat(document.getElementById("blood_pressure_systolic").value)],
+                "Blood Pressure Diastolic": [parseFloat(document.getElementById("blood_pressure_diastolic").value)],
+                "Respiratory Rate": [parseFloat(document.getElementById("respiratory_rate").value)],
+                "Body Temperature": [parseFloat(document.getElementById("body_temperature").value)],
+                "Blood Sugar Levels": [parseFloat(document.getElementById("blood_sugar_levels").value)],
+                "Oxygen Saturation Levels": [parseFloat(document.getElementById("oxygen_saturation_levels").value)],
+                "Medical Conditions": [document.getElementById("medical_conditions").value],
+                "Medication Required": [document.getElementById("medication_required").value]
+                // Add more fields as needed
+            };
+    
+            // Log the form data to the console
+            console.log(formData);
+    
+            // Make POST request to Flask backend
+            fetch('http://localhost:5000/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            // Display prediction result
+            document.getElementById("result").innerText = "Diagnosis: " + data;
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+    </script>
+    
+</body>
+</html>

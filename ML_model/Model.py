@@ -8,6 +8,7 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 
+
 class HealthPredictor:
     def __init__(self):
         self.model = None

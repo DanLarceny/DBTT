@@ -10,7 +10,7 @@ predictor = HealthPredictor()
 # Assuming the model needs to be trained only once and used for prediction multiple times
 # If the training data is not too large, it might be okay to load it at the start.
 # Otherwise, consider training the model outside the app and loading the trained model instead.
-predictor.train_model('first_5000_rows_healthcare_data.csv')
+predictor.train_model('ML_model/first_5000_rows_healthcare_data.csv')
 
 
 @app.route('/predict', methods=['POST'])

@@ -24,23 +24,7 @@
 
     <title>Modern JavaScript Dashboard</title>
 
-    <style>
-        /* Optional CSS for styling */
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .checked {
-            text-decoration: line-through;
-            color: gray;
-        }
-    </style>
-
 </head>
-
 
 
 
@@ -81,12 +65,15 @@
                             <span class="sr-only">User</span>
                         </a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Hello, Dr. Goh</a>
+                            <a href="#" class="dropdown-item">Hello, Name</a>
                             <div class="dropdown-divider"></div>
                             <a href="#" class="dropdown-item">
                                 <i class="fas fa-w fa-user-circle"></i> Profile
                             </a>
 
+                            <a href="#" class="dropdown-item">
+                                <i class="fas fa-w fa-cog"></i> Settings
+                            </a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -107,7 +94,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="doctor_dashboard.html">
                     <i class="fas fa-fw fa-sidenav fa-tachometer-alt"></i>
                     <div class="sidenav-link-text">Dashboard</div>
                 </a>
@@ -120,7 +107,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="reports.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-sidenav fa-folder-open"></i>
                     <div class="sidenav-link-text">Reports</div>
                 </a>
@@ -130,43 +117,165 @@
 
     <main class="main-container container-fluid pt-1 px-2 m-0">
 
+
+        <!-- card decks code from: https://www.codeply.com/go/nIB6oSbv6q -->  
+
         <div class="card-deck m-0 p-0">
-            <div class="card my-1 card-pie-chart">
+            <div class="card my-1">
                 <div class="content-container">
-                    <h2>Daily Reminders</h2>
-                    <form id="checklistForm">
-                        <input type="text" id="taskInput" placeholder="Enter task">
-                        <button type="button" onclick="addTask()">Add</button>
-                    </form>
-                    <ul id="taskList">
-                        <!-- Proxy items added here for demonstration -->
-                        <li onclick="toggleTask(this)">1. Check on Patient 20</li>
-                        <li onclick="toggleTask(this)">2. Diagnosis for Patient 23</li>
-                        <li onclick="toggleTask(this)">3. Diagnosis for Patient 1</li>
-                    </ul>
+                    <h3>Patient 1 Report</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/heartrate.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <h3>John Smith</h3>
+                            <button id="downloadButton">Download PDF</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        </div>
-
-        <div class="card-deck m-0 p-0">
-            <div class="card my-0">
+            <div class="card my-1">
                 <div class="content-container">
-                    <h3>Patient Dashboard</h3>
+                    <h3>Patient 2 Report</h3>
                     <div class="center-container">
-                        <script type='module' src='https://prod-apnortheast-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'></script><tableau-viz id='tableau-viz' src='https://prod-apnortheast-a.online.tableau.com/t/brendantan202229e5a4a177/views/HealthDashboard/HealthDashboard/26d7f186-8e81-46bf-8189-0bd6f40b26e0/703b4c7f-9549-4a59-b569-aac8ee54ac6d' width='2000' height='2040' hide-tabs toolbar='bottom' ></tableau-viz>
+                        <div class="image-container">
+                            <img src="src/img/heartrate.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <h3>John Smith</h3>
+                            <button id="downloadButton">Download PDF</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="card-deck m-0 p-0">
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Patient 3 Report</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/heartrate.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <h3>John Smith</h3>
+                            <button id="downloadButton">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <!-- card decks code from: https://www.codeply.com/go/nIB6oSbv6q -->  
-
-        <div class="card p-1 m-1 card-datatable card-body">
-            <div id="table-container" class="table-responsive px-2"></div>
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Patient 4 Report</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/heartrate.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <h3>John Smith</h3>
+                            <button id="downloadButton">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="card-deck m-0 p-0">
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Patient 5 Report</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/heartrate.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <h3>John Smith</h3>
+                            <button id="downloadButton">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Patient 6 Report</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/heartrate.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <h3>John Smith</h3>
+                            <button id="downloadButton">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-deck m-0 p-0">
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Patient 7 Report</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/heartrate.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <h3>John Smith</h3>
+                            <button id="downloadButton">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Patient 8 Report</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/heartrate.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <h3>John Smith</h3>
+                            <button id="downloadButton">Download PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+        <script>
+            // Function to trigger PDF file download
+            function downloadPDF() {
+                // Create a temporary anchor element
+                var a = document.createElement('a');
+    
+                // Set the href attribute to the path of the PDF file
+                a.href = 'path/to/your/report.pdf'; // Replace 'path/to/your/report.pdf' with the actual path to your PDF file
+    
+                // Set the file name
+                a.download = 'report.pdf';
+    
+                // Append the anchor element to the body
+                document.body.appendChild(a);
+    
+                // Programmatically click the anchor element to trigger download
+                a.click();
+    
+                // Remove the anchor element from the body
+                document.body.removeChild(a);
+            }
+    
+            // Add click event listener to the button
+            document.getElementById('downloadButton').addEventListener('click', downloadPDF);
+        </script>
+
+
     </main>
 
 
@@ -199,32 +308,5 @@
     <script src="src/js/modern-table-demo.js"></script>
 
 </body>
-
-<script>
-    var taskId = 3; // Starting task ID (to account for proxy items)
-    
-    function addTask() {
-        var input = document.getElementById("taskInput").value;
-        if (input === '') {
-            alert("Please enter a task!");
-            return;
-        }
-        
-        taskId++; // Increment task ID
-        var taskList = document.getElementById("taskList");
-        var li = document.createElement("li");
-        li.textContent = taskId + ". " + input; // Prepend task ID
-        li.addEventListener("click", function() {
-            toggleTask(this);
-        });
-        taskList.appendChild(li);
-        
-        document.getElementById("taskInput").value = ""; // Clear the input field
-    }
-    
-    function toggleTask(task) {
-        task.classList.toggle("checked");
-    }
-    </script>
 
 </html>

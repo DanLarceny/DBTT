@@ -38,7 +38,6 @@
         <style>
             /* Style for the container at the bottom */
             .bottom-container {
-                position: fixed;
                 bottom: 0;
                 width: 100%;
                 background-color: #f5f5f5;
@@ -248,7 +247,7 @@
                 </div>
             </div>
 
-            <div id="outputDiv">
+            <div id="outputDiv" class="card-deck m-0 p-0">
             </div>
          
             <div class="bottom-container">
@@ -354,7 +353,7 @@ function uploadPDF() {
 
     // Create the HTML content
     var htmlContent = `
-        <div class="card-deck m-0 p-0">
+       
             <div class="card my-1">
                 <div class="content-container">
                     <h3>Patient 500 Report</h3>
@@ -378,7 +377,7 @@ function uploadPDF() {
                     </div>
                 </div>
             </div>
-        </div>
+        
     `;
 
     // Append the HTML content to the output div

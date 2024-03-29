@@ -22,7 +22,7 @@
     <!-- site css -->
     <link rel="stylesheet" href="src/css/style.css">
 
-    <title>Modern JavaScript Dashboard</title>
+    <title>Happy Health</title>
 
     <style>
     .custom-link {
@@ -36,48 +36,51 @@
 <body class="body-grid-container">
     <header class="header-container p-0">
         <!-- source:
-             https://stackoverflow.com/questions/59067406/bootstrap-navbar-with-desired-width-and-centralized
-        -->
+         https://stackoverflow.com/questions/59067406/bootstrap-navbar-with-desired-width-and-centralized
+    -->
 
         <nav class="navbar navbar-expand-md">
             <div class="d-flex flex-grow-1 nav-div">
-              <!-- Fix: Use # not / so works in GitHub Pages -->
-
-                <form class="form-inline" id="search-form">
-                    <div class="input-group">
-                        <input type="search" class="form-control" value="Enter search text" aria-label="Enter search text">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary mx-1" type="submit" aria-label="Search" title="Search">
-                                <i class="fas fa-search" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
+                <!-- Fix: Use # not / so works in GitHub Pages -->
             </div>
-            <button class="navbar-toggler order-0 ml-2" type="button" data-toggle="collapse" data-target="#topnavDropdown">
+            <button
+                class="navbar-toggler order-0 ml-2"
+                type="button"
+                data-toggle="collapse"
+                data-target="#topnavDropdown"
+            >
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="navbar-collapse collapse flex-shrink-1 flex-grow-0 order-last " id="topnavDropdown">
+            <div
+                class="navbar-collapse collapse flex-shrink-1 flex-grow-0 order-last"
+                id="topnavDropdown"
+            >
                 <ul class="navbar-nav">
                     <!-- 
-                        added pr-3 to dropdown nav-items to fix overflow bug it caused 
-                        solution from:  
-                        https://stackoverflow.com/questions/48485889/bootstrap-4-nav-dropdown-menu-overflows-the-window
-                    -->
+                    added pr-3 to dropdown nav-items to fix overflow bug it caused 
+                    solution from:  
+                    https://stackoverflow.com/questions/48485889/bootstrap-4-nav-dropdown-menu-overflows-the-window
+                -->
                     <li class="nav-item dropdown pr-3">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <a
+                            href="#"
+                            class="nav-link dropdown-toggle"
+                            data-toggle="dropdown"
+                        >
                             <i class="fas fa-w fa-user"></i>
                             <span class="sr-only">User</span>
                         </a>
                         <div class="dropdown-menu">
-                            <p class="dropdown-item">Hello, Dr. Goh</p>
+                            <a href="#" class="dropdown-item"
+                                >Hello, Dr. Goh</a
+                            >
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-w fa-user-circle"></i> Profile
-                            </a>
-
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-w fa-cog"></i> Settings
+                            <a
+                                href="profiles/doctor_profile.html"
+                                class="dropdown-item"
+                            >
+                                <i class="fas fa-w fa-user-circle"></i>
+                                Profile
                             </a>
                         </div>
                     </li>
@@ -91,11 +94,16 @@
         </nav>
     </header>
 
-    <nav class="sidenav-container collapse show text-align-center px-2" id="sidenav">
+    <nav
+        class="sidenav-container collapse show text-align-center px-2"
+        id="sidenav"
+    >
         <ul class="nav navbar-nav flex-column sticky-top">
             <li class="nav-item sidenav-brand">
                 <a class="nav-link sidenav-brand-link" href="#">
-                    <div class="sidenav-brand-link-text"><i class="fas fa-funnel-dollar"></i> Healthcare Assistant</div>
+                    <div class="sidenav-brand-link-text">
+                        <i class="fas fa-funnel-dollar"></i> Happy Health
+                    </div>
                 </a>
             </li>
             <li class="nav-item">

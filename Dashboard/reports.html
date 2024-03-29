@@ -1,255 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 
+    <!-- 
     * Modern JavaScript Dashboard
     * Sample themable JavaScript dashboard template that employs modern ES6, Bootstrap 4 and CSS grid.
     * @author SimpleNotSimpler
     * @version 1.0.0
     * @license MIT
 -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        />
 
-    <!-- css for modern-table library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/simplenotsimpler/modern-table@1.0.8/src/modern-table.css">
+        <!-- Bootstrap -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous"
+        />
 
-    <!-- site css -->
-    <link rel="stylesheet" href="src/css/style.css">
+        <!-- css for modern-table library -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/simplenotsimpler/modern-table@1.0.8/src/modern-table.css"
+        />
 
-    <title>Modern JavaScript Dashboard</title>
+        <!-- site css -->
+        <link rel="stylesheet" href="src/css/style.css" />
 
-</head>
+        <title>Happy Health</title>
+    </head>
 
-
-
-<body class="body-grid-container">
-    <header class="header-container p-0">
-        <!-- source:
+    <body class="body-grid-container">
+        <header class="header-container p-0">
+            <!-- source:
              https://stackoverflow.com/questions/59067406/bootstrap-navbar-with-desired-width-and-centralized
         -->
 
-        <nav class="navbar navbar-expand-md">
-            <div class="d-flex flex-grow-1 nav-div">
-              <!-- Fix: Use # not / so works in GitHub Pages -->
-
-                <form class="form-inline" id="search-form">
-                    <div class="input-group">
-                        <input type="search" class="form-control" placeholder="Enter search text" aria-label="Enter search text">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary mx-1" type="submit" aria-label="Search" title="Search">
-                                <i class="fas fa-search" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <button class="navbar-toggler order-0 ml-2" type="button" data-toggle="collapse" data-target="#topnavDropdown">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="navbar-collapse collapse flex-shrink-1 flex-grow-0 order-last " id="topnavDropdown">
-                <ul class="navbar-nav">
-                    <!-- 
+            <nav class="navbar navbar-expand-md">
+                <div class="d-flex flex-grow-1 nav-div">
+                    <!-- Fix: Use # not / so works in GitHub Pages -->
+                </div>
+                <button
+                    class="navbar-toggler order-0 ml-2"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#topnavDropdown"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div
+                    class="navbar-collapse collapse flex-shrink-1 flex-grow-0 order-last"
+                    id="topnavDropdown"
+                >
+                    <ul class="navbar-nav">
+                        <!-- 
                         added pr-3 to dropdown nav-items to fix overflow bug it caused 
                         solution from:  
                         https://stackoverflow.com/questions/48485889/bootstrap-4-nav-dropdown-menu-overflows-the-window
                     -->
-                    <li class="nav-item dropdown pr-3">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                            <i class="fas fa-w fa-user"></i>
-                            <span class="sr-only">User</span>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Hello, Name</a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-w fa-user-circle"></i> Profile
+                        <li class="nav-item dropdown pr-3">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                data-toggle="dropdown"
+                            >
+                                <i class="fas fa-w fa-user"></i>
+                                <span class="sr-only">User</span>
                             </a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item"
+                                    >Hello, Dr. Goh</a
+                                >
+                                <div class="dropdown-divider"></div>
+                                <a
+                                    href="profiles/doctor_profile.html"
+                                    class="dropdown-item"
+                                >
+                                    <i class="fas fa-w fa-user-circle"></i>
+                                    Profile
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../Login/DBTT/login.html" class="nav-link">
+                                <i class="fas fa-w fa-sign-in-alt"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-w fa-cog"></i> Settings
-                            </a>
+        <nav
+            class="sidenav-container collapse show text-align-center px-2"
+            id="sidenav"
+        >
+            <ul class="nav navbar-nav flex-column sticky-top">
+                <li class="nav-item sidenav-brand">
+                    <a class="nav-link sidenav-brand-link" href="#">
+                        <div class="sidenav-brand-link-text">
+                            <i class="fas fa-funnel-dollar"></i> Happy Health
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../Login/DBTT/login.html" class="nav-link">
-                            <i class="fas fa-w fa-sign-in-alt"></i> Logout
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="doctor_dashboard.html">
+                        <i class="fas fa-fw fa-sidenav fa-tachometer-alt"></i>
+                        <div class="sidenav-link-text">Dashboard</div>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="diagnosis.html">
+                        <i class="fas fa-fw fa-sidenav fa-chart-area"></i>
+                        <div class="sidenav-link-text">Diagnosis</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reports.html">
+                        <i class="fas fa-fw fa-sidenav fa-folder-open"></i>
+                        <div class="sidenav-link-text">Reports</div>
+                    </a>
+                </li>
+            </ul>
         </nav>
-    </header>
 
-    <nav class="sidenav-container collapse show text-align-center px-2" id="sidenav">
-        <ul class="nav navbar-nav flex-column sticky-top">
-            <li class="nav-item sidenav-brand">
-                <a class="nav-link sidenav-brand-link" href="#">
-                    <div class="sidenav-brand-link-text"><i class="fas fa-funnel-dollar"></i> Healthcare Assistant</div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="doctor_dashboard.html">
-                    <i class="fas fa-fw fa-sidenav fa-tachometer-alt"></i>
-                    <div class="sidenav-link-text">Dashboard</div>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="diagnosis.html">
-                    <i class="fas fa-fw fa-sidenav fa-chart-area"></i>
-                    <div class="sidenav-link-text">Diagnosis</div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sidenav fa-folder-open"></i>
-                    <div class="sidenav-link-text">Reports</div>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-    <main class="main-container container-fluid pt-1 px-2 m-0">
-        <div class="card-deck m-0 p-0">
-            <div class="card my-1">
-                <div class="content-container">
-                    <h3>Patient 1 Report</h3>
-                    <div class="center-container">
-                        <div class="image-container">
-                            <img src="src/img/dcruz.png" alt="" class="icon">
-                        </div>
-                        <div class="number-container">
-                            <h3>Charlie Rodriguez</h3>
-                            <button id="downloadButton1" class="downloadButton">Download PDF</button>
+        <main class="main-container container-fluid pt-1 px-2 m-0">
+            <div class="card-deck m-0 p-0">
+                <div class="card my-1">
+                    <div class="content-container">
+                        <h3>Patient 1 Report</h3>
+                        <div class="center-container">
+                            <div class="image-container">
+                                <img
+                                    src="src/img/dcruz.png"
+                                    alt=""
+                                    class="icon-two"
+                                />
+                            </div>
+                            <div class="number-container">
+                                <h3>Charlie Rodriguez</h3>
+                                <button
+                                    id="downloadButton1"
+                                    class="downloadButton"
+                                >
+                                    Download PDF
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card-deck m-0 p-0">
-            <div class="card my-1">
-                <div class="content-container">
-                    <h3>Patient 21 Report</h3>
-                    <div class="center-container">
-                        <div class="image-container">
-                            <img src="src/img/ethan.png" alt="" class="icon">
-                        </div>
-                        <div class="number-container">
-                            <h3>Jordan Wilson</h3>
-                            <button id="downloadButton2" class="downloadButton">Download PDF</button>
+            <div class="card-deck m-0 p-0">
+                <div class="card my-1">
+                    <div class="content-container">
+                        <h3>Patient 21 Report</h3>
+                        <div class="center-container">
+                            <div class="image-container">
+                                <img
+                                    src="src/img/ethan.png"
+                                    alt=""
+                                    class="icon-two"
+                                />
+                            </div>
+                            <div class="number-container">
+                                <h3>Jordan Wilson</h3>
+                                <button
+                                    id="downloadButton2"
+                                    class="downloadButton"
+                                >
+                                    Download PDF
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card-deck m-0 p-0">
-            <div class="card my-1">
-                <div class="content-container">
-                    <h3>Patient 33 Report</h3>
-                    <div class="center-container">
-                        <div class="image-container">
-                            <img src="src/img/yunlin.png" alt="" class="icon">
-                        </div>
-                        <div class="number-container">
-                            <h3>Avery Garcia</h3>
-                            <button id="downloadButton3" class="downloadButton">Download PDF</button>
+            <div class="card-deck m-0 p-0">
+                <div class="card my-1">
+                    <div class="content-container">
+                        <h3>Patient 33 Report</h3>
+                        <div class="center-container">
+                            <div class="image-container">
+                                <img
+                                    src="src/img/yunlin.png"
+                                    alt=""
+                                    class="icon-two"
+                                />
+                            </div>
+                            <div class="number-container">
+                                <h3>Avery Garcia</h3>
+                                <button
+                                    id="downloadButton3"
+                                    class="downloadButton"
+                                >
+                                    Download PDF
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card-deck m-0 p-0">
-            <div class="card my-1">
-                <div class="content-container">
-                    <h3>Patient 153 Report</h3>
-                    <div class="center-container">
-                        <div class="image-container">
-                            <img src="src/img/horace.jpg" alt="" class="icon">
-                        </div>
-                        <div class="number-container">
-                            <h3>Riley Jones</h3>
-                            <button id="downloadButton4" class="downloadButton">Download PDF</button>
+            <div class="card-deck m-0 p-0">
+                <div class="card my-1">
+                    <div class="content-container">
+                        <h3>Patient 153 Report</h3>
+                        <div class="center-container">
+                            <div class="image-container">
+                                <img
+                                    src="src/img/horace.jpg"
+                                    alt=""
+                                    class="icon-two"
+                                />
+                            </div>
+                            <div class="number-container">
+                                <h3>Riley Jones</h3>
+                                <button
+                                    id="downloadButton4"
+                                    class="downloadButton"
+                                >
+                                    Download PDF
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-            
+
+            <div id="outputDiv">
+            </div>
+
+            <br/>
+
+            <form id="pdfUploadForm" enctype="multipart/form-data">
+                <input type="file" id="pdfFileInput" accept=".pdf" />
+                <button type="submit" id="upload">Upload</button>
+            </form>
+
+            <script>
+                function downloadPDF(index) {
+                    // Array of PDF file paths
+                    var pdfPaths = [
+                        "data/Patient1_Report.pdf",
+                        "data/Patient21_Report.pdf",
+                        "data/Patient33_Report.pdf",
+                        "data/Patient153_Report.pdf",
+                        "data/Patient500_Report.pdf"
+                    ];
+
+                    var a = document.createElement("a");
+
+                    a.href = pdfPaths[index];
+
+                    var fileName = pdfPaths[index].split("/").pop();
+
+                    a.download = fileName;
+
+                    document.body.appendChild(a);
+
+                    a.click();
+
+                    document.body.removeChild(a);
+                }
+
+                var downloadButtons =
+                    document.querySelectorAll(".downloadButton");
+                downloadButtons.forEach(function (button, index) {
+                    button.addEventListener("click", function () {
+                        downloadPDF(index);
+                    });
+                });
+            </script>
+        </main>
+
+        <!-- jQuery and JS bundle w/ Popper.js -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- moment.js for date/time -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+            integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- CDN for Apex Charts -->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <!-- CDN for format-intl-number library -->
+        <script src="https://cdn.jsdelivr.net/gh/simplenotsimpler/format-intl-number@1.0.0/format-intl-number.js"></script>
+
+        <!-- CDN for modern-table library -->
+        <script src="https://cdn.jsdelivr.net/gh/simplenotsimpler/modern-table@1.0.8/src/modern-table.js"></script>
+
+        <!-- globals for charts -->
+        <script src="src/js/chart-demo/chart-global.js"></script>
+
+        <!-- demo charts -->
+        <script src="src/js/chart-demo/chart-area-demo.js"></script>
+        <script src="src/js/chart-demo/chart-bar-demo.js"></script>
+        <script src="src/js/chart-demo/chart-pie-demo.js"></script>
+
+        <!-- demo modern-table integration -->
+        <script src="src/js/modern-table-demo.js"></script>
 
         <script>
-            function downloadPDF(index) {
-                // Array of PDF file paths
-                var pdfPaths = [
-                    'data/Patient1_Report.pdf',
-                    'data/Patient21_Report.pdf',
-                    'data/Patient33_Report.pdf',
-                    'data/Patient153_Report.pdf'
-                ];
+document.getElementById("pdfUploadForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+    uploadPDF();
+});
 
-                var a = document.createElement('a');
+function uploadPDF() {
+    var outputDiv = document.getElementById("outputDiv");
 
-                a.href = pdfPaths[index];
+    // Create the HTML content
+    var htmlContent = `
+        <div class="card-deck m-0 p-0">
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Patient 500 Report</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img
+                                src="src/img/profile.png"
+                                alt=""
+                                class="icon-two"
+                            />
+                        </div>
+                        <div class="number-container">
+                            <h3></h3>
+                            <button
+                                id="downloadButton5"
+                                class="downloadButton"
+                            >
+                                Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
 
-                var fileName = pdfPaths[index].split('/').pop();
+    // Append the HTML content to the output div
+    outputDiv.innerHTML = htmlContent;
+}
 
-                a.download = fileName;
-
-                document.body.appendChild(a);
-
-                a.click();
-
-                document.body.removeChild(a);
-            }
-
-            var downloadButtons = document.querySelectorAll('.downloadButton');
-            downloadButtons.forEach(function(button, index) {
-                button.addEventListener('click', function() {
-                    downloadPDF(index);
-                });
-            });
         </script>
 
-
-    </main>
-
-
-
-    <!-- jQuery and JS bundle w/ Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    <!-- moment.js for date/time -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
-
-    <!-- CDN for Apex Charts -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
-    <!-- CDN for format-intl-number library -->
-    <script src="https://cdn.jsdelivr.net/gh/simplenotsimpler/format-intl-number@1.0.0/format-intl-number.js"></script>
-
-    <!-- CDN for modern-table library -->
-    <script src="https://cdn.jsdelivr.net/gh/simplenotsimpler/modern-table@1.0.8/src/modern-table.js"></script>
-
-    <!-- globals for charts -->
-    <script src="src/js/chart-demo/chart-global.js"></script>
-
-    <!-- demo charts -->
-    <script src="src/js/chart-demo/chart-area-demo.js"></script>
-    <script src="src/js/chart-demo/chart-bar-demo.js"></script>
-    <script src="src/js/chart-demo/chart-pie-demo.js"></script>
-
-    <!-- demo modern-table integration -->
-    <script src="src/js/modern-table-demo.js"></script>
-
-</body>
-
+        
+    </body>
 </html>

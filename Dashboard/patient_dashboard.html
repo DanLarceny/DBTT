@@ -22,9 +22,10 @@
     <!-- site css -->
     <link rel="stylesheet" href="src/css/style.css">
 
-    <title>Modern JavaScript Dashboard</title>
+    <title>Happy Health</title>
 
 </head>
+
 
 <body class="body-grid-container">
     <header class="header-container p-0">
@@ -34,19 +35,7 @@
 
         <nav class="navbar navbar-expand-md">
             <div class="d-flex flex-grow-1 nav-div">
-              <!-- Fix: Use # not / so works in GitHub Pages -->
-
-                <form class="form-inline" id="search-form">
-                    <div class="input-group">
-                        <input type="search" class="form-control" placeholder="Enter search text" aria-label="Enter search text">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary mx-1" type="submit" aria-label="Search" title="Search">
-                                <i class="fas fa-search" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+                             </div>
             <button class="navbar-toggler order-0 ml-2" type="button" data-toggle="collapse" data-target="#topnavDropdown">
                 <i class="fas fa-bars"></i>
             </button>
@@ -65,13 +54,6 @@
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Hello, Jordan</a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-w fa-user-circle"></i> Profile
-                            </a>
-
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-w fa-cog"></i> Settings
-                            </a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -88,49 +70,20 @@
         <ul class="nav navbar-nav flex-column sticky-top">
             <li class="nav-item sidenav-brand">
                 <a class="nav-link sidenav-brand-link" href="#">
-                    <div class="sidenav-brand-link-text"><i class="fas fa-funnel-dollar"></i> Healthcare</div>
+                    <div class="sidenav-brand-link-text"><i class="fas fa-funnel-dollar"></i> Happy Health</div>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="patient_dashboard.html">
                     <i class="fas fa-fw fa-sidenav fa-tachometer-alt"></i>
                     <div class="sidenav-link-text">Dashboard</div>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="medication.html">
                     <i class="fas fa-fw fa-sidenav fa-chart-area "></i>
                     <div class="sidenav-link-text">Medication</div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sidenav fa-download"></i>
-                    <div class="sidenav-link-text">Export</div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sidenav fa-folder-open"></i>
-                    <div class="sidenav-link-text">Reports</div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sidenav fa-link"></i>
-                    <div class="sidenav-link-text">Link</div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sidenav fa-link"></i>
-                    <div class="sidenav-link-text">Link</div>
-                </a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-sidenav fa-link"></i>
-                    <div class="sidenav-link-text">Link</div>
                 </a>
             </li>
         </ul>
@@ -153,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="card my-1 card-bar-chart">
+            <div class="card my-1">
                 <div class="content-container">
                     <h3>Blood Pressure</h3>
                     <div class="center-container">
@@ -161,13 +114,13 @@
                             <img src="src/img/bp.png" alt="" class="icon">
                         </div>
                         <div class="number-container">
-                            <p class="number" id="bloodPressure">123</p>
+                            <p class="number" id="bloodPressure">117</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card my-1 card-pie-chart">
+            <div class="card my-1">
                 <div class="content-container">
                     <h3>Cholesterol Level</h3> 
                     <div class="center-container">
@@ -175,12 +128,59 @@
                             <img src="src/img/cholesterol.png" alt="" class="icon">
                         </div>
                         <div class="number-container">
-                            <!-- Replace '123' with your desired number -->
-                            <p class="number">123</p>
+                            <p class="number">117</p>
                         </div>
                     </div>
                 </div>
             </div>
+            
+
+        </div>
+
+        <div class="card-deck m-0 p-0">
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Respiration Rate</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/rr.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <p class="number" id="respirationRate">20</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Body Temperature</h3>
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/temp.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <p class="number" id="temp">35.2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-1">
+                <div class="content-container">
+                    <h3>Oxygen Saturation Levels</h3> 
+                    <div class="center-container">
+                        <div class="image-container">
+                            <img src="src/img/oxygen.png" alt="" class="icon">
+                        </div>
+                        <div class="number-container">
+                            <!-- Replace '123' with your desired number -->
+                            <p class="number" id ="oxygen">95.123</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
 
         </div>
 
@@ -197,10 +197,6 @@
 
 
         <!-- card decks code from: https://www.codeply.com/go/nIB6oSbv6q -->  
-
-        <div class="card p-1 m-1 card-datatable card-body">
-            <div id="table-container" class="table-responsive px-2"></div>
-        </div>
     </main>
 
 
@@ -274,6 +270,68 @@
 
     // Update the blood pressure every 10 seconds
     setInterval(updateBloodPressure, 10000);
+
+    function updateRespirationRate() {
+        var currentRate = parseInt(document.getElementById("respirationRate").innerText);
+        var targerRate = Math.floor(Math.random() * 20) + 10; // Example: Random number between 60 and 160
+        var step = (targerRate - currentRate) / 20; // Adjust the step for smoother transition
+
+        function animate() {
+            currentRate += step;
+            document.getElementById("respirationRate").innerText = Math.round(currentRate);
+
+            if ((step > 0 && currentRate < targerRate) || (step < 0 && currentRate > targerRate)) {
+                requestAnimationFrame(animate);
+            }
+        }
+
+        animate();
+    }
+
+    // Update the heart rate every 2 seconds
+    setInterval(updateRespirationRate, 1000);
+
+    function updateTemperature() {
+    var currentTemp = parseFloat(document.getElementById("temp").innerText);
+    var targetTemp = (Math.random() * 10) + 35; // Example: Random number between 35 and 45
+    var step = (targetTemp - currentTemp) / 20; // Adjust the step for smoother transition
+
+    function animate() {
+        currentTemp += step;
+        document.getElementById("temp").innerText = currentTemp.toFixed(1); // Round to 1 decimal place
+
+        if ((step > 0 && currentTemp < targetTemp) || (step < 0 && currentTemp > targetTemp)) {
+            requestAnimationFrame(animate);
+        }
+    }
+
+        animate();
+    }
+
+    // Update the temperature every 2 seconds
+    setInterval(updateTemperature, 1000);
+
+    function updateOxygenLevel() {
+    var currentOxygen = parseFloat(document.getElementById("oxygen").innerText);
+    var targetOxygen = (Math.random() * 10) + 90; // Example: Random number between 90 and 100
+    var step = (targetOxygen - currentOxygen) / 20; // Adjust the step for smoother transition
+
+    function animate() {
+        currentOxygen += step;
+        document.getElementById("oxygen").innerText = currentOxygen.toFixed(3); // Round to 3 decimal places
+
+        if ((step > 0 && currentOxygen < targetOxygen) || (step < 0 && currentOxygen > targetOxygen)) {
+            requestAnimationFrame(animate);
+        }
+    }
+
+    animate();
+}
+
+// Update the oxygen level every 2 seconds
+setInterval(updateOxygenLevel, 1000);
+
+
 </script>
 
 </html>
